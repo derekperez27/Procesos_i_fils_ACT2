@@ -3,11 +3,10 @@ package procesos;
 import java.util.Scanner;
 
 /*
- CÀLCUL CONCURRENT DE SUMES PARCIALS
- - Rebre un únic argument per línia de comandes: nombre de fils a crear.
- - Cada fil sol·licitarà a l'usuari un enter N i calcularà la suma de 1..N.
+ CALCUL CONCURRENT DE SUMES PARCIALS
+ - Rebre un  argument per línia de comandes: nombre de fils a crear.
+ - Cada fil sol·licitarà a l'usuari un numero i se calcularà la suma de 1..N.
  - El main esperarà tots els fils amb join() i mostrarà els resultats en l'ordre de creació.
- Implementació mínima i senzilla: lectura sincronitzada de System.in per evitar races.
 */
 public class CalculConcurrentDeSumesParcials {
     private static final Scanner scanner = new Scanner(System.in);
@@ -48,7 +47,7 @@ public class CalculConcurrentDeSumesParcials {
             final int idx = i;
             fils[i] = new Thread(() -> {
                 long N = llegirEnterNoNegatiu(idx);
-                // usar fórmula per eficiència i per no fer bucles llargs
+                // no fer bucles llargs
                 long suma = N * (N + 1) / 2;
                 resultats[idx] = suma;
             });
@@ -66,3 +65,4 @@ public class CalculConcurrentDeSumesParcials {
         }
     }
 }
+
