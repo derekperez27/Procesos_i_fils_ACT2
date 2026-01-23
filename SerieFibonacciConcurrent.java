@@ -5,9 +5,8 @@ import java.util.Scanner;
 /*
  SERIE DE FIBONACCI CONCURRENT
  - Rebre per consola el nombre de fils a crear.
- - Cada fil calcula Fibonacci(index) segons el seu índex (fil 0 -> F(0)).
+ - Cada fil calcula Fibonacci segons el seu índex (fil 0 -> F(0)).
  - El main imprimeix els resultats en ordre creixent d'índex.
- Implementació mínima: lectura per Scanner a l'inici; fils escriuen en array compartit.
 */
 public class SerieFibonacciConcurrent {
 
@@ -56,3 +55,4 @@ public class SerieFibonacciConcurrent {
         for (int i = 0; i < nThreads; i++) System.out.println("F(" + i + ") = " + resultats[i]);
     }
 }
+
