@@ -45,7 +45,7 @@ public class ComprobacioNumerosPrimos {
                 long v = Long.parseLong(s);
                 if (v == -1) break;
                 nums[idx++] = v;
-            } catch (NumberFormatException e) { /* ignorar */ }
+            } catch (NumberFormatException e) {  }
         }
 
         final boolean[] esPrimo = new boolean[count];
@@ -65,3 +65,4 @@ public class ComprobacioNumerosPrimos {
         }
     }
 }
+
