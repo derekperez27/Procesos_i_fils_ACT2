@@ -6,7 +6,7 @@ import java.util.Scanner;
 /*
  Búsqueda concurrente del valor máximo en un vector.
  Entrada por teclado: tamaño del vector y número de hilos.
- Cada hilo procesa un bloque consecutivo de tamaño floor(size/nThreads).
+ Cada hilo procesa un bloque consecutivo de tamaño floor.
  Si quedan posiciones (resto), las procesa el programa principal.
  Al final se muestra el valor máximo y qué hilo (o el main) lo encontró.
 */
@@ -72,3 +72,4 @@ public class BusquedaValorMaximoVector {
         System.out.println("\nMaxim global: " + globalMax + " trobat per: " + foundBy);
     }
 }
+
